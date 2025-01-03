@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://kcds1vyltm5l"]
+
+[ext_resource type="Script" path="res://LQGMain/Tests/if_is_compact_test.gd" id="1_t5gtp"]
+[ext_resource type="PackedScene" uid="uid://d3dnq17og135l" path="res://LQGMain/Tests/test_pane.tscn" id="2_rmf3w"]
+
+[node name="IfIsCompactTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t5gtp")
+
+[node name="Landscape" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TestPane" parent="Landscape" instance=ExtResource("2_rmf3w")]
+layout_mode = 2
+
+[node name="TestPane2" parent="Landscape" instance=ExtResource("2_rmf3w")]
+self_modulate = Color(0, 0.703892, 0.766934, 1)
+layout_mode = 2
+
+[node name="Portrait" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TestPane" parent="Portrait" instance=ExtResource("2_rmf3w")]
+layout_mode = 2
+
+[node name="TestPane2" parent="Portrait" instance=ExtResource("2_rmf3w")]
+self_modulate = Color(0, 0.703892, 0.766934, 1)
+layout_mode = 2

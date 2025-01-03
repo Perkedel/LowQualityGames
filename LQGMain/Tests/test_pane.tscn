@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d3dnq17og135l"]
+
+[node name="TestPane" type="Panel"]
+self_modulate = Color(1, 0, 1, 1)
+size_flags_horizontal = 3
+size_flags_vertical = 3

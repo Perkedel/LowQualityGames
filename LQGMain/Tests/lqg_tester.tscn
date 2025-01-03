@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsrqa6isbsl7c"]
+
+[ext_resource type="PackedScene" uid="uid://w888d37upgnm" path="res://LQGMain/lqg_scaffold.tscn" id="1_p6uin"]
+[ext_resource type="PackedScene" uid="uid://kcds1vyltm5l" path="res://LQGMain/Tests/if_is_compact_test.tscn" id="2_xyu2p"]
+
+[node name="Tester" type="Node"]
+
+[node name="LQGScaffold" parent="." instance=ExtResource("1_p6uin")]
+contenting = ExtResource("2_xyu2p")
