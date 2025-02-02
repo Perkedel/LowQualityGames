@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://dw2dbrr31mpbt"]
+
+[ext_resource type="PackedScene" uid="uid://baow82uxclxn2" path="res://LQGCardtridge/__CORE/boot.tscn" id="1_c7qjm"]
+[ext_resource type="Script" path="res://LQGCardtridge/LQGSample/boot.gd" id="2_uimcc"]
+[ext_resource type="PackedScene" uid="uid://clbajsewaf86n" path="res://LQGMain/lqg_button.tscn" id="3_1i2ym"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_46god"]
+font_size = 32
+
+[node name="Boot" instance=ExtResource("1_c7qjm")]
+script = ExtResource("2_uimcc")
+
+[node name="Control" type="Control" parent="." index="0"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TempOptione" type="VBoxContainer" parent="Control" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Say" type="Label" parent="Control/TempOptione" index="0"]
+layout_mode = 2
+text = "Hello world"
+label_settings = SubResource("LabelSettings_46god")
+
+[node name="start" parent="Control/TempOptione" index="1" instance=ExtResource("3_1i2ym")]
+layout_mode = 2
+text = "start"
+
+[node name="addscore" parent="Control/TempOptione" index="2" instance=ExtResource("3_1i2ym")]
+layout_mode = 2
+text = "increment score"
+
+[node name="decscore" parent="Control/TempOptione" index="3" instance=ExtResource("3_1i2ym")]
+layout_mode = 2
+text = "decrement score"
+
+[node name="die" parent="Control/TempOptione" index="4" instance=ExtResource("3_1i2ym")]
+layout_mode = 2
+text = "die"
+
+[connection signal="pressed" from="Control/TempOptione/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Control/TempOptione/addscore" to="." method="_on_addscore_pressed"]
+[connection signal="pressed" from="Control/TempOptione/decscore" to="." method="_on_decscore_pressed"]
+[connection signal="pressed" from="Control/TempOptione/die" to="." method="_on_die_pressed"]
