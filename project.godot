@@ -18,3 +18,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 WindowInfo="*res://LQGMain/Singletons/WindowInfo.gd"
+GUIDE="*res://addons/guide/guide.gd"
+DarkMode="*res://addons/dark_mode/dark_mode.tscn"
+SettingsDataManager="*res://addons/modular-settings-menu/singletons/settings_data_manager.gd"
+ImGuiRoot="*res://addons/imgui-godot/data/ImGuiRoot.tscn"
+LqgAppLists="*res://LQGMain/Singletons/LQG_AppLists.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dark_mode/plugin.cfg", "res://addons/guide/plugin.cfg", "res://addons/imgui-godot/plugin.cfg", "res://addons/licenses/plugin.cfg", "res://addons/modular-settings-menu/plugin.cfg", "res://addons/plenticons/plugin.cfg", "res://addons/scrolllistcontainer/plugin.cfg", "res://addons/tnowe_extra_controls/plugin.cfg")

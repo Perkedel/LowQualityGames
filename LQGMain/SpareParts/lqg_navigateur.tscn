@@ -1,0 +1,274 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu7wpq6gpe6rd"]
+
+[ext_resource type="Script" path="res://LQGMain/SpareParts/lqg_navigateur.gd" id="1_m7pjn"]
+[ext_resource type="Texture2D" uid="uid://bpck4lhbr8obj" path="res://LQGMain/Assets/img/mavrickle.png" id="1_t5jnx"]
+[ext_resource type="PackedScene" uid="uid://c5i0uw5llpwa8" path="res://LQGMain/SpareParts/LQG_AppButton.tscn" id="3_5mgqs"]
+[ext_resource type="Script" path="res://addons/scrolllistcontainer/ScrollListContainer.gd" id="3_d6a3w"]
+
+[node name="LQG_Navigateur" type="Node"]
+script = ExtResource("1_m7pjn")
+
+[node name="UISelector" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AppList" type="Control" parent="UISelector"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemList" type="ItemList" parent="UISelector/AppList"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+max_text_lines = 2
+auto_height = true
+item_count = 3
+max_columns = 3
+same_column_width = true
+fixed_icon_size = Vector2i(128, 128)
+item_0/text = "aaa"
+item_0/icon = ExtResource("1_t5jnx")
+item_1/text = "bbb"
+item_1/icon = ExtResource("1_t5jnx")
+item_2/text = "ccc"
+item_2/icon = ExtResource("1_t5jnx")
+
+[node name="GridContainer" type="GridContainer" parent="UISelector/AppList"]
+visible = false
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="LQG_AppButton" parent="UISelector/AppList/GridContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton2" parent="UISelector/AppList/GridContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="Container" type="Container" parent="UISelector/AppList"]
+visible = false
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_d6a3w")
+
+[node name="LQG_AppButton" parent="UISelector/AppList/Container" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton2" parent="UISelector/AppList/Container" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton3" parent="UISelector/AppList/Container" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton4" parent="UISelector/AppList/Container" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton5" parent="UISelector/AppList/Container" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton6" parent="UISelector/AppList/Container" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton7" parent="UISelector/AppList/Container" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UISelector/AppList"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="HFlowContainer" type="HFlowContainer" parent="UISelector/AppList/ScrollContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LQG_AppButton" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton2" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton3" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton4" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton5" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton6" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton7" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton8" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton9" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton10" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton11" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton12" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton13" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton14" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton15" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton16" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton17" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton18" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton19" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton20" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton21" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton22" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton23" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton24" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton25" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton26" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton27" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton28" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton29" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton30" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton31" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton32" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton33" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton34" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton35" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton36" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton37" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton38" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton39" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton40" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton41" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton42" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton43" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton44" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton45" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton46" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton47" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton48" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton49" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="LQG_AppButton50" parent="UISelector/AppList/ScrollContainer/HFlowContainer" instance=ExtResource("3_5mgqs")]
+layout_mode = 2
+
+[node name="InsertGameHere" type="SubViewportContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="InsertGameHere"]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 0

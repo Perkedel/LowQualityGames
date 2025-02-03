@@ -12,13 +12,15 @@ var contentInstance:Node
 	get:
 		return contenting
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#refreshContent()
 	pass # Replace with function body.
 
 func installContent(scene:Node):
-	$VBoxContainer/Content.add_child(scene)
+	$VBoxContainer/Content/SubViewport.add_child(scene)
 	#$VBoxContainer/LQGAppbar.stuffContent = scene
 	#$VBoxContainer/LQGAppbar.installContent(scene)
 	pass
@@ -31,8 +33,8 @@ func refreshContent():
 	pass
 
 func clearContent():
-	for thing in $VBoxContainer/Content.get_children():
-		$VBoxContainer/Content.remove_child(thing)
+	for thing in $VBoxContainer/Content/SubViewport.get_children():
+		$VBoxContainer/Content/SubViewport.remove_child(thing)
 		thing.free()
 		pass
 	#$VBoxContainer/LQGAppbar.clearContent()
@@ -44,6 +46,20 @@ func setTitle(into:String):
 
 func setTitleSmall(into:String):
 	$VBoxContainer/LQGAppbar.setTitleSmall(into)
+	pass
+
+func setTitleAlignment(horizontal:HorizontalAlignment = HORIZONTAL_ALIGNMENT_LEFT):
+	$VBoxContainer/LQGAppbar.setTitleAlignment(horizontal)
+	pass
+
+func setTitleSmallAlignment(horizontal:HorizontalAlignment = HORIZONTAL_ALIGNMENT_LEFT):
+	$VBoxContainer/LQGAppbar.setTitleSmallAlignment(horizontal)
+	pass
+
+func launchApp(with:Node):
+	var refer = $VBoxContainer/Content/SubViewport.get_child(0)
+	if refer.has_method("launchApp"):
+		refer.call_deferred("launchApp", with)
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

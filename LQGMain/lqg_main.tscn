@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cktltaoat4em"]
+[gd_scene load_steps=4 format=3 uid="uid://cktltaoat4em"]
 
 [ext_resource type="PackedScene" uid="uid://w888d37upgnm" path="res://LQGMain/lqg_scaffold.tscn" id="1_1xvnp"]
 [ext_resource type="Script" path="res://LQGMain/lqg_main.gd" id="1_nndgc"]
+[ext_resource type="PackedScene" uid="uid://cu7wpq6gpe6rd" path="res://LQGMain/SpareParts/lqg_navigateur.tscn" id="3_5xnnq"]
 
 [node name="LQGMain" type="Node"]
 script = ExtResource("1_nndgc")
 
 [node name="LQGScaffold" parent="." instance=ExtResource("1_1xvnp")]
+contenting = ExtResource("3_5xnnq")

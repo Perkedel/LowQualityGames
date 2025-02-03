@@ -57,6 +57,18 @@ func setTitleSmall(into:String):
 		pass
 	pass
 
+func setTitleAlignment(horizontal:HorizontalAlignment = HORIZONTAL_ALIGNMENT_LEFT):
+	if contentInstance and contentInstance.has_method("setTitleAlignment"):
+		contentInstance.call_deferred("setTitleAlignment", horizontal)
+		pass
+	pass
+
+func setTitleSmallAlignment(horizontal:HorizontalAlignment = HORIZONTAL_ALIGNMENT_LEFT):
+	if contentInstance and contentInstance.has_method("setTitleSmallAlignment"):
+		contentInstance.call_deferred("setTitleSmallAlignment", horizontal)
+		pass
+	pass
+
 func refreshContent():
 	clearContent()
 	#if contenting:
@@ -95,4 +107,9 @@ func _on_nav_back_pressed() -> void:
 func _on_nav_menu_pressed() -> void:
 	_repositionPopupMenu()
 	$PopupMenu.popup()
+	pass # Replace with function body.
+
+
+func _on_popup_menu_index_pressed(index: int) -> void:
+	print("select " + String.num(index))
 	pass # Replace with function body.

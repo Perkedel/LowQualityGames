@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5i0uw5llpwa8"]
+
+[ext_resource type="Texture2D" uid="uid://bpck4lhbr8obj" path="res://LQGMain/Assets/img/mavrickle.png" id="1_qywdx"]
+[ext_resource type="Script" path="res://LQGMain/SpareParts/lqg_app_button.gd" id="2_mctnd"]
+
+[node name="LQG_AppButton" type="Button"]
+custom_minimum_size = Vector2(128, 128)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+text = "APP"
+icon = ExtResource("1_qywdx")
+flat = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+script = ExtResource("2_mctnd")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

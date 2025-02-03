@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsplnchne788j"]
+
+[ext_resource type="PackedScene" uid="uid://baow82uxclxn2" path="res://LQGCardtridge/__CORE/boot.tscn" id="1_3br5h"]
+
+[node name="Boot" instance=ExtResource("1_3br5h")]
+
+[node name="Control" type="Control" parent="." index="0"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemList" type="ItemList" parent="Control" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+select_mode = 1
+item_count = 2
+max_columns = 3
+same_column_width = true
+item_0/text = "aaaaa"
+item_1/text = "bbbbbb"

@@ -37,13 +37,16 @@ flat = true
 [node name="PopupMenu" type="PopupMenu" parent="."]
 position = Vector2i(0, 170)
 hide_on_state_item_selection = true
-item_count = 3
+item_count = 4
 item_0/text = "AAAAA"
 item_1/text = "afa"
 item_1/id = 2
 item_1/separator = true
-item_2/text = "Exit"
-item_2/id = 1
+item_2/text = "Settings"
+item_2/id = 3
+item_3/text = "Exit"
+item_3/id = 1
 
 [connection signal="pressed" from="RowStuffs/NavBack" to="." method="_on_nav_back_pressed"]
 [connection signal="pressed" from="RowStuffs/NavMenu" to="." method="_on_nav_menu_pressed"]
+[connection signal="index_pressed" from="PopupMenu" to="." method="_on_popup_menu_index_pressed"]

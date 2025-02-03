@@ -1,6 +1,11 @@
-[gd_scene format=3 uid="uid://clbajsewaf86n"]
+[gd_scene load_steps=2 format=3 uid="uid://clbajsewaf86n"]
+
+[ext_resource type="Script" path="res://LQGMain/lqg_button.gd" id="1_btaxc"]
 
 [node name="LQGButton" type="Button"]
 custom_minimum_size = Vector2(64, 64)
 offset_right = 269.0
 offset_bottom = 227.0
+script = ExtResource("1_btaxc")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
