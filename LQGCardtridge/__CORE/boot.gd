@@ -2,6 +2,7 @@ extends Node
 
 class_name LQG_Boot
 
+@export var displayName:String = "A Low Quality Game"
 enum States{
 	init = 0, # game booted
 	started = 1, # game start

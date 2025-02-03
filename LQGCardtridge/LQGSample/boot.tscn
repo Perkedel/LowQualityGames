@@ -9,6 +9,7 @@ font_size = 32
 
 [node name="Boot" instance=ExtResource("1_c7qjm")]
 script = ExtResource("2_uimcc")
+displayName = "LQG Sample"
 
 [node name="Control" type="Control" parent="." index="0"]
 layout_mode = 3

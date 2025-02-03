@@ -27,7 +27,15 @@ func fillApps(with:PackedStringArray):
 	for i in with:
 		print("Appe " + i)
 		var nowThing:LQG_AppButton = baseAppButton.instantiate()
-		nowThing.label = i
+		var display:String = i
+		var bootInfo:PackedScene = load("res://LQGCardtridge/"+i+"/boot.tscn")
+		if bootInfo:
+			var boota:LQG_Boot = bootInfo.instantiate()
+			if boota:
+				display = boota.displayName
+				boota.free()
+			#bootInfo.free()
+		nowThing.label = display
 		nowThing.idName = i
 		nowThing.connect("launchApp",_on_anAppButton_Launch)
 		containsApps.add_child(nowThing)
